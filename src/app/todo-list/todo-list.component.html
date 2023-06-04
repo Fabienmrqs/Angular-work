@@ -1,0 +1,12 @@
+<p>todo-list works!</p>
+<ol>
+    <li *ngFor="let item of array" >
+        {{item | uppercase}}
+        <button class="btn" (click)="remove(item)">remove</button>
+    </li>
+</ol>
+<input type="text" [(ngModel)]="value" />
+<button class="button" (click)="add()" >add</button>
+
+<div class="" >{{temperature}}</div>
+<div *ngIf="!isFinished" class="chargement">chargement</div>
