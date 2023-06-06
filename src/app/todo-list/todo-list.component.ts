@@ -1,6 +1,6 @@
 import { CommonModule, NgForOf } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -15,7 +15,7 @@ export class  TodoListComponent implements OnInit {
   value = '';
   temperature : number;
   isFinished = false;
-
+  @Input() itemInput = 'Input Item';
 
   constructor(private http: HttpClient) {
    }
@@ -24,21 +24,15 @@ export class  TodoListComponent implements OnInit {
       this.fetch()
   }
 
- 
-
-
   add() {
     this.array.push(this.value)
     this.value ='';
     console.log(this.value)
   }
 
-
-
   remove(todoItem : string){
     // this.array.splice(this.array.indexOf(todoItem), 1)
     this.array = this.array.filter ((item) => item !== todoItem) 
-    
   }
 
   private fetch(){
@@ -48,5 +42,4 @@ export class  TodoListComponent implements OnInit {
        this.isFinished = true;
       })
   }
-
 }
