@@ -1,0 +1,3 @@
+<div class="hero-name" *ngFor="let hero of heroes">
+  <app-hero-item (clickHero)="showHeroName($event)" [hero]="hero"></app-hero-item> 
+</div>

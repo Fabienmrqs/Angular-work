@@ -11,11 +11,13 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./todo-list.component.css']
 })
 export class  TodoListComponent implements OnInit {
+  @Input() item : string;
+
+
   array = ['Faire du sport', 'Faire à manger'];
   value = '';
   temperature : number;
   isFinished = false;
-  @Input() itemInput = 'Input Item';
 
   constructor(private http: HttpClient) {
    }
