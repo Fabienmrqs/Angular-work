@@ -7,6 +7,9 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { HeroItemComponent } from './hero-item/hero-item.component';
+import { FormGroupComponent } from './form-group/form-group.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -14,12 +17,14 @@ import { HeroItemComponent } from './hero-item/hero-item.component';
     AppComponent,
     HeroListComponent,
     HeroItemComponent,
+    FormGroupComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TodoListComponent,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

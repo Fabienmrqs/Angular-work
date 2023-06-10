@@ -1,0 +1,8 @@
+<p>form-group works!</p>
+
+<form action="" [formGroup]="loginForm" class="form" (ngSubmit)="loginUser()">
+    <input type="text" placeholder="enter name" formControlName="user">
+    <br>
+    <input type="text" placeholder="enter password" formControlName="password">
+    <button>login</button>
+</form>
