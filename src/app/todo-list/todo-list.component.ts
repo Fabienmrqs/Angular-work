@@ -2,6 +2,8 @@ import { CommonModule, NgForOf } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {MatDialog, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   imports: [CommonModule, FormsModule],

@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero-list.component.css']
 })
 export class HeroListComponent {
+
+  
  heroes = [{
   id : 0, name:  'Batman'},
   {

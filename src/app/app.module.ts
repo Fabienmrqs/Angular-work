@@ -9,6 +9,10 @@ import { HeroListComponent } from './hero-list/hero-list.component';
 import { HeroItemComponent } from './hero-item/hero-item.component';
 import { FormGroupComponent } from './form-group/form-group.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ExoAngularComponent } from './exo-angular/exo-angular.component';
+import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './modal/modal.component';
+
 
 
 
@@ -18,13 +22,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeroListComponent,
     HeroItemComponent,
     FormGroupComponent,
+    ExoAngularComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TodoListComponent,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
