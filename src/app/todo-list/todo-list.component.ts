@@ -4,9 +4,11 @@ import { AfterViewInit, Component, OnInit, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {MatDialog, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+import { ModalComponent } from '../modal/modal.component';
+
 
 @Component({
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,MatButtonModule,MatDialogModule],
   selector: 'app-todo-list',
   standalone: true,
   templateUrl: './todo-list.component.html',
@@ -21,7 +23,8 @@ export class  TodoListComponent implements OnInit {
   temperature : number;
   isFinished = false;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, public dialog:MatDialog) {
+
    }
 
   ngOnInit(): void {
@@ -37,6 +40,12 @@ export class  TodoListComponent implements OnInit {
   remove(todoItem : string){
     // this.array.splice(this.array.indexOf(todoItem), 1)
     this.array = this.array.filter ((item) => item !== todoItem) 
+  }
+
+  openDialog(){
+    this.dialog.open(ModalComponent, {
+      width: '250px',
+    })
   }
 
   private fetch(){

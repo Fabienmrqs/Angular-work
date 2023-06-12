@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ExoAngularComponent } from './exo-angular/exo-angular.component';
 import { FormsModule } from '@angular/forms';
 import { ModalComponent } from './modal/modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -31,7 +32,9 @@ import { ModalComponent } from './modal/modal.component';
     TodoListComponent,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
